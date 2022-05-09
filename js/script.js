@@ -2,6 +2,7 @@ const app = new Vue(
     {
         el : `#root`,
         data: {
+            newTodoInput: '',
             todos: [
                 {
                     text: 'Fare la spesa',
@@ -24,6 +25,13 @@ const app = new Vue(
         methods: {
             removeItem: function (index) {
                 this.todos.splice(index,1);
+            },
+
+            addElement: function() {
+                if (this.newTodoInput !== "") {
+                    this.todos.push({text: this.newTodoInput, done: false});
+                    this.newTodoInput = ``;
+                }
             },
         }
     }

@@ -36,6 +36,11 @@
             </header> 
     
             <section class="todos">
+
+                <div class="input">
+                    <input type="text" placeholder="New ToDo" v-model="newTodoInput">
+                    <button @click="addElement">Add to list</button>
+                </div>
     
                <ul>
     
@@ -43,7 +48,7 @@
 
                     <span class="text">{{item.text}}</span>
 
-                    <span class="cross-btn"  @click="removeItem(index)"><i class="fas fa-times"></i></span>
+                    <span class="cross-btn" @click="removeItem(index)"><i class="fas fa-times"></i></span>
 
                    </li>
     
