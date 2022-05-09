@@ -19,7 +19,29 @@
 <body>
 
     <div id="root">
-        
+
+        <div class="container">
+
+            <header>
+
+                <h1>ToDoList</h1>
+    
+            </header> 
+    
+            <section class="todos">
+    
+               <ul>
+    
+                   <li v-for="item in todos" :class="{done : item.done}">
+                       {{item.text}}
+                   </li>
+    
+               </ul>
+    
+            </section>  
+
+        </div>
+
     </div>
 
     <!-- SCRIPT -->
