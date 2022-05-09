@@ -5,24 +5,26 @@ const app = new Vue(
             todos: [
                 {
                     text: 'Fare la spesa',
-                    done: false
+                    done: false,
                 },
                 {
                     text: 'Lavare i piatti',
-                    done: false
+                    done: true,
                 },
                 {
                     text: 'Fare gli esercizi',
-                    done: false
+                    done: false,
                 },
                 {
                     text: 'Preparare il pranzo',
-                    done: true
+                    done: false,
                 },
             ],
         },
         methods: {
-
+            removeItem: function (index) {
+                this.todos.splice(index,1);
+            },
         }
     }
 )
