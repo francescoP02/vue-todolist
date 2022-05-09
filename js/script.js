@@ -49,6 +49,10 @@ const app = new Vue(
                     this.newTodoInput = ``;
                 }
             },
+
+            switchDone: function(index) {
+                this.todos[index].done = !this.todos[index].done;
+            },
         }
     }
 )
