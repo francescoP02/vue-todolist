@@ -38,7 +38,7 @@
             <section class="todos">
 
                 <div class="input">
-                    <input type="text" placeholder="New ToDo" v-model="newTodoInput">
+                    <input type="text" @keyup.enter="addElement" placeholder="New ToDo" v-model="newTodoInput">
                     <button @click="addElement">Add to list</button>
                 </div>
     
